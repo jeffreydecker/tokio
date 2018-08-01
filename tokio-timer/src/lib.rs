@@ -25,6 +25,8 @@ extern crate tokio_executor;
 
 #[macro_use]
 extern crate futures;
+#[macro_use]
+extern crate log;
 
 pub mod clock;
 pub mod timer;
