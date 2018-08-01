@@ -337,6 +337,8 @@ where T: Park,
         if when > self.elapsed {
             self.elapsed = when;
             self.inner.elapsed.store(when, SeqCst);
+        } else {
+            error!("elapsed={:?}; when={:?}", self.elapsed, when);
         }
     }
 
